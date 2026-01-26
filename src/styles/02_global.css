@@ -12,8 +12,24 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Playfair-Bold';
+  src: url(../fonts/PlayfairDisplay-Bold.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Playfair-Medium';
+  src: url(../fonts/PlayfairDisplay-Medium.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 400;
+}
+
 :root {
   --font-family: 'Playfair-Display';
+  --font-bold: 'Playfair-Bold';
+  --font-medium: 'Playfair-Medium';
   --second-family: 'Clicker-Script';
 
   --base-white: #fff;
@@ -42,8 +58,11 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-family);
-  font-size: 3.375rem;
+  font-family: var(--font-bold);
+  font-size: 54px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--coffee);
 }
 
 p {
@@ -61,4 +80,10 @@ section {
   max-width: 1220px;
   padding-inline: 20px;
   margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 30px;
+  }
 }

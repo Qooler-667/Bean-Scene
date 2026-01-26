@@ -1,13 +1,22 @@
 .home {
   display: flex;
   width: 100%;
-
   padding-top: 88px;
+  position: relative;
+}
+
+.home::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(../images/coffee_image.webp);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 10%;
   background-size: cover;
-  position: relative;
   z-index: -5;
 }
 
@@ -20,7 +29,7 @@
   width: 100%;
   height: 100%;
   background-image: linear-gradient(45deg, #1e1e1e 0%, rgba(0, 0, 0, 0) 100%);
-  z-index: -1;
+  z-index: -4;
 }
 
 .home__content-wrapper {
@@ -32,10 +41,9 @@
 }
 
 .home__subtitle {
-  font-family: var(--font-family);
+  font-family: var(--font-medium);
   font-size: 1.375rem;
   font-weight: 500;
-  letter-spacing: 0.05px;
   color: var(--base-white);
 }
 
@@ -49,10 +57,90 @@
 .home__btn {
   letter-spacing: 0.2px;
 }
+/* ----------------- Best-section ------------------- */
+.best {
+  position: relative;
+  width: 100%;
+}
+
+.best__content-wrapper {
+  display: flex;
+  gap: clamp(20px, 7vw, 95px);
+}
+
+.best__content {
+  max-width: 585px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-block: 67px;
+  gap: 29px;
+}
+
+.best__content-title {
+  white-space: wrap;
+}
+
+.best__content-text {
+  line-height: 170%;
+  color: var(--dull-gray);
+}
+
+.best__content-img {
+  display: block;
+  min-width: 500px;
+  height: 484px;
+}
+
+.best__coffee-blast {
+  position: absolute;
+  left: 0;
+  bottom: -127px;
+  max-width: 27.6vw;
+  height: auto;
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .home__content-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .best__content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
+  .best__content {
+    max-width: 100%;
+    margin-block: 0;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .best__content-title {
+    line-height: 110%;
+  }
+
+  .best__content-text {
+    margin-bottom: 20px;
+  }
+
+  .best__content-img {
+    min-width: 200px;
+    height: auto;
+    margin-inline: auto;
+    z-index: -1;
+  }
+
+  .best__coffee-blast {
+    bottom: 0;
+  }
+}
 
 @media (max-width: 768px) {
   .home {
-    padding-top: 0px;
     background-position: 67.5% center;
   }
   .home__content-wrapper {
@@ -66,4 +154,7 @@
   .home__subtitle {
     text-shadow: 0 0 10px black;
   }
+}
+
+@media (max-width: 425px) {
 }

@@ -18,6 +18,7 @@
     opacity 0.3s ease,
     visibility 0.3s;
   pointer-events: none;
+  z-index: 999;
 }
 
 .burger__menu-fon.is-open {
@@ -36,7 +37,7 @@
   left: 0;
   background-image: url(../images/coffee_bean.webp);
   background-repeat: no-repeat;
-  background-size: 100% 70%;
+  background-size: contain;
   background-position: center bottom;
   z-index: 0;
 }
