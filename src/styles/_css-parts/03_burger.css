@@ -1,0 +1,84 @@
+.burger__menu-fon {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    115deg,
+    var(--base-black) 30%,
+    var(--chocco) 100%
+  );
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s;
+  pointer-events: none;
+}
+
+.burger__menu-fon.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.burger__menu-fon::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/coffee_bean.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
+  background-position: center bottom;
+  z-index: 0;
+}
+
+.burger__menu-wrapper {
+  width: calc(100% - 40px);
+  max-width: 400px;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.burger__menu {
+  margin-bottom: 30px;
+}
+
+.burger__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.burger__menu-link {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  color: var(--base-white);
+  transition: color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.burger__menu-link:hover {
+  color: var(--bg-btn);
+}
+
+.burger__menu-item:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

@@ -4,18 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="styles/main.min.css" />
   </head>
   <body>
+    <header class="header">
+  <div class="container header__container">
+    <div class="header__content-wrapper">
+      <div class="header__logo">
+        <a href="#" class="header__logo-link">Bean Scene</a>
+      </div>
+      <div class="header__action">
+        <nav aria-label="Main navigation">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Home</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Menu</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">About Us</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__btns-wrapper">
+          <button class="header__btn btn mod-btn" type="button">Sign In</button>
+          <button class="header__btn btn" type="button">Sign Up</button>
+        </div>
+      </div>
+      <button
+        class="burger__btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="burger__btn-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <!-- --------------------------------- -->
+    <main>
+      <section class="home"></section>
+    </main>
     
     <!-- --------------------------------- -->
-    <main></main>
-    
+    <div class="burger__menu-fon">
+  <div class="burger__menu-wrapper">
+    <button class="burger__exit-btn" type="button">
+      <span class="burger__exit-line"></span>
+    </button>
+    <nav class="burger__menu">
+      <ul class="burger__menu-list">
+        <li class="burger__menu-item">
+          <a href="#" class="burger__menu-link">Home</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#" class="burger__menu-link">Menu</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#" class="burger__menu-link">About Us</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#" class="burger__menu-link">Contact Us</a>
+        </li>
+        <li class="burger__menu-item">
+          <button class="burger__menu-btn" type="button">Sign In</button>
+          <button class="burger__menu-btn" type="button">Sign Up</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
     <!-- --------------------------------- -->
-    
+
     <!-- --------------------------------- -->
-    
-    <!-- --------------------------------- -->
-    <script src=""></script>
+    <script src="/js/main.min.js"></script>
   </body>
 </html>

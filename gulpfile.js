@@ -82,29 +82,35 @@ function images() {
 
 // 7. SVG Sprite (Сборка и очистка)
 function sprite() {
-  return src('src/images/icons/**/*.svg')
-    .pipe(
-      cheerio({
-        run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
-        },
-        parserOptions: { xmlMode: true },
-      })
-    )
-    .pipe(replace('&gt;', '>'))
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: '../stack.svg',
+  return (
+    src('src/images/icons/**/*.svg')
+      .pipe(
+        cheerio({
+          run: function ($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
           },
-        },
-      })
-    )
-    .pipe(dest('docs/images'))
-    .pipe(bs.stream());
+          parserOptions: { xmlMode: true },
+        })
+      )
+      .pipe(replace('&gt;', '>'))
+      .pipe(
+        svgSprite({
+          mode: {
+            stack: {
+              // Указываем подпапку относительно docs/images
+              dest: 'icons',
+              // Имя файла внутри этой подпапки
+              sprite: 'stack.svg',
+            },
+          },
+        })
+      )
+      // Базовая папка назначения
+      .pipe(dest('docs/images'))
+      .pipe(bs.stream())
+  );
 }
 
 // 8. Server
