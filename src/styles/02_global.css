@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Playfair-Display';
-  src: url(../fonts/PlayfairDisplay-Regular.woff2) format('woff2');
+  src: url(../fonts/playfair-display-regular.woff2) format('woff2');
   font-display: swap;
   font-weight: 400;
 }
@@ -16,7 +16,7 @@
   font-family: 'Playfair-Bold';
   src: url(../fonts/PlayfairDisplay-Bold.woff2) format('woff2');
   font-display: swap;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 @font-face {
@@ -26,10 +26,18 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Playfair-Semi';
+  src: url(../fonts/PlayfairDisplay-SemiBold.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 400;
+}
+
 :root {
   --font-family: 'Playfair-Display';
   --font-bold: 'Playfair-Bold';
   --font-medium: 'Playfair-Medium';
+  --font-semi: 'Playfair-Semi';
   --second-family: 'Clicker-Script';
 
   --base-white: #fff;
@@ -54,15 +62,15 @@ h1 {
   font-family: var(--second-family);
   font-size: clamp(8rem, 17vw, 13.75rem);
   font-weight: 400;
+
   color: var(--base-white);
 }
 
 h2 {
   font-family: var(--font-bold);
   font-size: 54px;
-  font-weight: 700;
-  white-space: nowrap;
   color: var(--coffee);
+  line-height: 135%;
 }
 
 p {
@@ -82,8 +90,29 @@ section {
   margin-inline: auto;
 }
 
+.section__title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.section__subtitle {
+  font-family: var(--font-family);
+  font-size: 20px;
+  line-height: 170%;
+  margin-bottom: 31px;
+  color: var(--dull-gray);
+}
+
 @media (max-width: 768px) {
   section {
     margin-bottom: 30px;
+  }
+
+  h2 {
+    line-height: 110%;
   }
 }

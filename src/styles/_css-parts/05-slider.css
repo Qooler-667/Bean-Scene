@@ -1,0 +1,115 @@
+.recall__slider {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.recall__slider-track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.recall__slider-item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 980px;
+  padding: 30px 39px 0 39px;
+  position: relative;
+}
+
+.recall__slider-item:after {
+  content: '';
+  display: block;
+  width: calc(100% - 2px);
+  height: calc(90% - 2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-btn);
+  z-index: -1;
+}
+
+.recall__item-icon {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 15px;
+}
+
+.recall__item-text {
+  max-width: 780px;
+  margin-inline: auto;
+  margin-bottom: 34px;
+  font-family: var(--font-semi);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 200%;
+  text-align: center;
+  color: var(--dull-gray);
+}
+
+.recall__item-autor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.recall__autor-name {
+  display: block;
+  font-family: var(--font-bold);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--coffee);
+  margin-bottom: 6px;
+}
+
+.recall__autor-job {
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--dull-gray);
+  margin-bottom: 49px;
+}
+
+.recall__autor-img {
+  display: block;
+  width: 112px;
+  height: 112px;
+  border-radius: 16px;
+  background-image: url(../images/recall-autor.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  .recall__item-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .recall__slider-item:after {
+    height: calc(100% - 2px);
+  }
+
+  .recall__item-text {
+    line-height: 150%;
+  }
+
+  .recall__autor-job {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .recall__item-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+}

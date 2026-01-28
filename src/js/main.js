@@ -33,3 +33,44 @@ menu.addEventListener('click', (e) => {
     closeMenu();
   }
 });
+
+// ------------------------ Slider ----------------------------
+// Ждем загрузки DOM, чтобы найти элементы
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.recall__slider-track');
+  const slides = document.querySelectorAll('.recall__slider-item');
+  const nextBtn = document.querySelector('.recall__control-btn:last-child');
+  const prevBtn = document.querySelector('.recall__control-btn:first-child');
+
+  let currentIndex = 0;
+
+  // Функция обновления позиции трека
+  function updateSlider() {
+    // Берем ширину одного слайда (твои 980px или сколько будет по факту)
+    const slideWidth = slides[0].offsetWidth;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  // Листаем вперед
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; // Зацикливаем в начало
+    }
+    updateSlider();
+  });
+
+  // Листаем назад
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = slides.length - 1; // Зацикливаем в конец
+    }
+    updateSlider();
+  });
+
+  // На случай изменения размера окна, чтобы слайд не "съехал"
+  window.addEventListener('resize', updateSlider);
+});

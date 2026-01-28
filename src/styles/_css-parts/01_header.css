@@ -40,6 +40,7 @@ header {
   font-family: var(--font-medium);
   font-size: 14px;
   font-weight: 500;
+  line-height: 100%;
   color: var(--base-white);
   white-space: nowrap;
   transition: color 0.3s;

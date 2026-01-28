@@ -1,0 +1,68 @@
+.blend__cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: minmax(388px, auto);
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.blend__card {
+  width: 280px;
+  height: 388px;
+  position: relative;
+}
+
+.blend__card-content {
+  display: flex;
+  width: 100%;
+  height: 364px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(249, 192, 106, 0.42);
+}
+
+.blend__card-img {
+  display: block;
+  width: 100%;
+  min-height: 222px;
+}
+
+.blend__card-desc {
+  width: 100%;
+  height: 142px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  padding-block: 14px 40px;
+  background: var(--bg-card);
+}
+
+.blend__card-title {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 130%;
+  color: var(--coffee);
+}
+
+.blend__card-type {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--btn-text);
+}
+
+.blend__card-price {
+  font-family: var(--font-bold);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--coffee);
+}
+
+.blend__card-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+}
