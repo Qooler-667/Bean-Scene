@@ -23,14 +23,14 @@
   font-family: 'Playfair-Medium';
   src: url(../fonts/PlayfairDisplay-Medium.woff2) format('woff2');
   font-display: swap;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @font-face {
   font-family: 'Playfair-Semi';
   src: url(../fonts/PlayfairDisplay-SemiBold.woff2) format('woff2');
   font-display: swap;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 :root {
@@ -47,15 +47,17 @@
   --bg-card: #fff9f1;
   --card-hover: #ffeed8;
   --dull-gray: #707070;
-  --coffee: #603809;
+  --coffee: rgb(96, 56, 9);
   --chocco: #24110d;
   --btn-text: #1e1e1e;
 }
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  scroll-padding-top: 80px;
 }
 
 h1 {

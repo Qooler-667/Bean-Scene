@@ -3,7 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <noscript
+      ><div
+        style="
+          padding: 20px;
+          text-align: center;
+          background: #603809;
+          color: #fff;
+        "
+      >
+        For full functionality of this site it is necessary to enable
+        JavaScript.
+      </div></noscript
+    >
+    <title>Bean Scene | Coffee Shop</title>
+    <meta
+      name="description"
+      content="Discover Bean Scene - your destination for the finest coffee blends and a cozy atmosphere."
+    />
+    <meta name="theme-color" content="#603809" />
+    <meta property="og:image" content="images/og-image.webp" />
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
+
+    <link rel="icon" href="images/favicon.webp" type="image/webp" />
+
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+    <link
+      rel="preload"
+      href="./fonts/ClickerScript-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/PlayfairDisplay-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles/main.min.css" />
   </head>
   <body>
@@ -20,13 +59,13 @@
               <a href="#" class="header__menu-link">Home</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Menu</a>
+              <a href="#menu" class="header__menu-link">Menu</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">About Us</a>
+              <a href="#about" class="header__menu-link">About Us</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Contact Us</a>
+              <a href="#contact" class="header__menu-link">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -40,6 +79,7 @@
         type="button"
         aria-label="Open menu"
         aria-expanded="false"
+        aria-controls="mobile-menu"
       >
         <span class="burger__btn-line"></span>
       </button>
@@ -49,7 +89,7 @@
 
     <!-- --------------------------------- -->
     <main>
-      <section class="home">
+      <section class="home" id="home">
         <div class="container home__container">
           <div class="home__content-wrapper">
             <span class="home__subtitle"
@@ -61,12 +101,12 @@
               best flavours coffee you will ever have. We provide the best for
               our customers.
             </p>
-            <a class="home__btn btn">Order Now</a>
+            <a href="#menu" class="home__btn btn">Order Now</a>
           </div>
         </div>
       </section>
       <!-- --------------------------------- -->
-      <section class="best">
+      <section class="best" id="about">
         <div class="container best__container">
           <div class="best__content-wrapper">
             <div class="best__content">
@@ -78,10 +118,14 @@
                 coffee is greater. There is no doubt that you will enjoy this
                 coffee more than others you have ever tasted.
               </p>
-              <a href="#" class="best__content-btn btn">Learn More</a>
+              <a href="#pluses" class="best__content-btn btn">Learn More</a>
             </div>
             <div class="best__content-img">
-              <img src="images/cup-coffee.webp" alt="" />
+              <img
+                src="images/cup-coffee.webp"
+                alt="Coffee cup"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -92,7 +136,7 @@
         />
       </section>
       <!-- --------------------------------- -->
-      <section class="blend">
+      <section class="blend" id="menu">
         <div class="container blend__container">
           <div class="blend__content-wrapper">
             <div class="blend__title-wrapper section__title">
@@ -106,7 +150,7 @@
   <!-- ---------------------------------------- -->
   <div class="blend__card">
     <div class="blend__card-content">
-      <img class="blend__card-img" src="images/blend-1.webp" alt="#" />
+      <img class="blend__card-img" src="images/blend-1.webp" alt="Cappuccino" />
       <div class="blend__card-desc">
         <span class="blend__card-title">Cappuccino</span>
         <span class="blend__card-type">Coffee 50% | Milk 50%</span>
@@ -118,7 +162,7 @@
   <!-- ---------------------------------------- -->
   <div class="blend__card">
     <div class="blend__card-content">
-      <img class="blend__card-img" src="images/blend-2.webp" alt="#" />
+      <img class="blend__card-img" src="images/blend-2.webp" alt="Chai Latte" />
       <div class="blend__card-desc">
         <span class="blend__card-title">Chai Latte</span>
         <span class="blend__card-type">Coffee 50% | Milk 50%</span>
@@ -130,7 +174,7 @@
   <!-- ---------------------------------------- -->
   <div class="blend__card">
     <div class="blend__card-content">
-      <img class="blend__card-img" src="images/blend-3.webp" alt="#" />
+      <img class="blend__card-img" src="images/blend-3.webp" alt="Macchiato" />
       <div class="blend__card-desc">
         <span class="blend__card-title">Macchiato</span>
         <span class="blend__card-type">Coffee 50% | Milk 50%</span>
@@ -142,7 +186,7 @@
   <!-- ---------------------------------------- -->
   <div class="blend__card">
     <div class="blend__card-content">
-      <img class="blend__card-img" src="images/blend-4.webp" alt="#" />
+      <img class="blend__card-img" src="images/blend-4.webp" alt="Expresso" />
       <div class="blend__card-desc">
         <span class="blend__card-title">Expresso</span>
         <span class="blend__card-type">Coffee 50% | Milk 50%</span>
@@ -157,7 +201,7 @@
         </div>
       </section>
       <!-- --------------------------------- -->
-      <section class="pluses">
+      <section class="pluses" id="pluses">
         <div class="container pluses__container">
           <div class="pluses__content-wrapper">
             <div class="pluses__title-wrapper section__title">
@@ -186,7 +230,7 @@
                 <img
                   class="pluses__card-img"
                   src="images/pluses-award.webp"
-                  alt="coffee beans"
+                  alt="award"
                 />
                 <div class="pluses__desc">
                   <span class="pluses__card-title">High Quality</span>
@@ -201,7 +245,7 @@
                 <img
                   class="pluses__card-img"
                   src="images/pluses-cup.webp"
-                  alt="coffee beans"
+                  alt="coffee cup"
                 />
                 <div class="pluses__desc">
                   <span class="pluses__card-title">Extraordinary </span>
@@ -215,7 +259,7 @@
                 <img
                   class="pluses__card-img"
                   src="images/pluses-price.webp"
-                  alt="coffee beans"
+                  alt="best price"
                 />
                 <div class="pluses__desc">
                   <span class="pluses__card-title">Affordable Price</span>
@@ -233,7 +277,7 @@
                   that<br /><span>Get started today.</span>
                 </p>
               </div>
-              <a href="#" class="pluses__footer-btn btn">Join Us</a>
+              <a href="#contact" class="pluses__footer-btn btn">Join Us</a>
             </div>
           </div>
         </div>
@@ -255,10 +299,10 @@
                 We are giving you are one time opportunity to experience a
                 better life with coffee.
               </p>
-              <a href="#" class="chance__btn btn">Order Now</a>
+              <a href="#menu" class="chance__btn btn">Order Now</a>
             </div>
             <div class="chance__content-img">
-              <img src="images/chance-cup.png" alt="" />
+              <img src="images/chance-cup.png" alt="Coffee cup promo" />
             </div>
           </div>
         </div>
@@ -367,8 +411,133 @@
         </div>
       </section>
       <!-- --------------------------------- -->
+      <section class="post">
+        <div class="container post__container">
+          <div class="post__content-wrapper">
+            <div class="post__title-wrapper section__title">
+              <h2 class="post__title">Subscribe to get the Latest News</h2>
+              <p class="post__subtitle section__subtitle">
+                Don’t miss out on our latest news, updates, tips and special
+                offers
+              </p>
+            </div>
+            <div class="post__form-wrapper">
+              <form action="#" method="post" class="post__form">
+                <div class="post__form-group">
+                  <input
+                    class="post__input"
+                    type="email"
+                    placeholder="Enter your mail"
+                    required
+                    aria-label="Email address"
+                  />
+                  <button class="post__btn btn" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="post__cup-left post__cup">
+          <img src="images/cup-left.webp" alt="" />
+        </div>
+        <div class="post__cup-right post__cup">
+          <img src="images/cup-right.png" alt="" />
+        </div>
+      </section>
+      <!-- --------------------------------- -->
     </main>
-    
+    <footer class="footer" id="contact">
+  <div class="container footer__container">
+    <div class="footer__content-wrapper">
+      <div class="footer__content-social">
+        <a class="footer__social-logo">Bean Scene</a>
+        <p class="footer__social-desc">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <div class="footer__social-links">
+          <a href="#" class="footer__social-link">
+            <svg class="footer__link-icon">
+              <use href="../images/icons/stack.svg#facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link">
+            <svg class="footer__link-icon">
+              <use href="../images/icons/stack.svg#instagram"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link">
+            <svg class="footer__link-icon">
+              <use href="../images/icons/stack.svg#youtube"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link">
+            <svg class="footer__link-icon">
+              <use href="../images/icons/stack.svg#twitter"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__content-about">
+        <span class="footer__list-title">About</span>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a href="#" class="footer__item-link">Menu</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__item-link">Features</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__item-link">News & Blogs</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__item-link">Help & Supports</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__content-company">
+        <span class="footer__list-title">Company</span>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a href="#" class="footer__item-link">How we work</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__item-link">Terms of service</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__item-link">Pricing</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__item-link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__content-contact">
+        <span class="footer__list-title contact-title">Contact Us</span>
+        <address class="footer__contact-info">
+          <p class="footer__contact-item">
+            Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016
+          </p>
+          <a href="tel:+12023456789" class="footer__contact-item"
+            >+1 202-918-2132</a
+          >
+          <a href="mailto:beancene@gmail.com" class="footer__contact-item"
+            >beanscene@mail.com</a
+          >
+          <a
+            href="https://www.beancene.com"
+            target="_blank"
+            class="footer__contact-item"
+            >www.beanscene.com</a
+          >
+        </address>
+      </div>
+    </div>
+  </div>
+</footer>
+
     <!-- --------------------------------- -->
     <div class="burger__menu-fon">
   <div class="burger__menu-wrapper">
@@ -378,27 +547,25 @@
     <nav class="burger__menu">
       <ul class="burger__menu-list">
         <li class="burger__menu-item">
-          <a href="#" class="burger__menu-link">Home</a>
+          <a href="#home" class="burger__menu-link">Home</a>
         </li>
         <li class="burger__menu-item">
-          <a href="#" class="burger__menu-link">Menu</a>
+          <a href="#menu" class="burger__menu-link">Menu</a>
         </li>
         <li class="burger__menu-item">
-          <a href="#" class="burger__menu-link">About Us</a>
+          <a href="#about" class="burger__menu-link">About Us</a>
         </li>
         <li class="burger__menu-item">
-          <a href="#" class="burger__menu-link">Contact Us</a>
+          <a href="#contact" class="burger__menu-link">Contact Us</a>
         </li>
         <li class="burger__menu-item">
-          <a href="#" class="burger__menu-btn" type="button">Sign In</a>
-          <a href="#" class="burger__menu-btn" type="button">Sign Up</a>
+          <a href="#signin" class="burger__menu-btn" type="button">Sign In</a>
+          <a href="#signup" class="burger__menu-btn" type="button">Sign Up</a>
         </li>
       </ul>
     </nav>
   </div>
 </div>
-
-    <!-- --------------------------------- -->
 
     <!-- --------------------------------- -->
     <script src="/js/main.min.js"></script>

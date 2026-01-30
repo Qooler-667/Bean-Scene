@@ -13,6 +13,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #1e1e1e;
   background-image: url(../images/coffee_image.webp);
   background-repeat: no-repeat;
   background-position: center 10%;
@@ -43,7 +44,6 @@
 .home__subtitle {
   font-family: var(--font-medium);
   font-size: 22px;
-  font-weight: 500;
   line-height: 130%;
   color: var(--base-white);
 }
@@ -305,12 +305,111 @@
   bottom: 0;
 }
 
+/* ----------------- Post-section ------------------- */
+.post {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.post::after,
+.post::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.post::after {
+  background-image: url(../images/chance-bg.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -5;
+}
+
+.post::before {
+  background: var(--coffee);
+  opacity: 0.8;
+  z-index: -4;
+}
+
+.post__content-wrapper {
+  width: 100%;
+  padding-block: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post__title {
+  color: var(--base-white);
+}
+
+.post__subtitle {
+  color: var(--base-white);
+  margin-bottom: 25px;
+}
+
+.post__form-wrapper {
+  width: 100%;
+  max-width: 642px;
+}
+
+.post__form-group {
+  display: flex;
+  width: 100%;
+  max-height: 66px;
+  border-radius: 4px;
+  background: var(--bg-card);
+  border: 1px solid rgba(249, 192, 106, 0.42);
+}
+
+.post__input {
+  display: flex;
+  flex-grow: 1;
+  padding: 16px 26px;
+  font-family: var(--font-family);
+  font-size: 20px;
+  line-height: 170%;
+  color: var(--coffee);
+}
+
+.post__input::placeholder {
+  font-family: var(--font-family);
+  font-size: 20px;
+  line-height: 170%;
+  color: rgba(0, 0, 0, 0.34);
+}
+
+.post__cup {
+  display: block;
+  width: clamp(122px, 21.8vw, 444px);
+  height: auto;
+  max-height: 358px;
+  position: absolute;
+  bottom: -121px;
+  pointer-events: none;
+}
+
+.post__cup-left {
+  left: 0;
+}
+
+.post__cup-right {
+  right: 0;
+}
+
+/* -------------------- @Media ---------------- */
+
 @media (max-width: 1024px) {
   .home__content-wrapper {
     margin-bottom: 50px;
   }
 
-  /* ------------- Best-section ------------ */
+  /* ------------- Best - media ------------ */
 
   .best__content-wrapper {
     flex-direction: column;
@@ -341,7 +440,7 @@
     bottom: 0;
   }
 
-  /* ------------- Chance-section ------------ */
+  /* ------------- Chance - media ------------ */
 
   .chance {
     background-size: 50% 50%;
@@ -373,7 +472,7 @@
     object-fit: contain;
   }
 
-  /* ------------- Recall-section ------------ */
+  /* ------------- Recall - media ------------ */
   .recall__blast-top {
     top: 90px;
   }
@@ -397,13 +496,13 @@
     text-shadow: 0 0 10px var(--base-black);
   }
 
-  /* ------------- Pluse-section ------------ */
+  /* ------------- Pluse - media ------------ */
 
   .pluses__coffee-splash {
     top: 50px;
   }
 
-  /* ------------- Chance-section ------------ */
+  /* ------------- Chance - media ------------ */
 
   .chance {
     background-size: contain;
@@ -413,7 +512,7 @@
     padding-block: 30px 0;
   }
 
-  /* ------------- Recall-section ------------ */
+  /* ------------- Recall - media ------------ */
 
   .recall__slider-wrapper {
     padding-inline: 20px;
@@ -421,6 +520,26 @@
 
   .recall__blast-top {
     top: 120px;
+  }
+
+  /* ------------- Post - media ------------ */
+  .post__form-group {
+    flex-direction: column;
+    max-height: 150px;
+    gap: 20px;
+    border: none;
+    background: transparent;
+    align-items: center;
+  }
+  .post__input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(249, 192, 106, 0.42);
+  }
+
+  .post__cup {
+    bottom: -60px;
   }
 }
 

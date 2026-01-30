@@ -170,7 +170,7 @@
   border: 1px solid var(--base-white);
 }
 
-/* ---------------- recall__slider-btns ---------------------- */
+/* ---------------- slider-btns ---------------------- */
 
 .recall__slider-controll {
   position: absolute;
@@ -194,10 +194,30 @@
   background: var(--bg-btn);
   z-index: 5;
   pointer-events: all;
+  transition: 0.3s;
 }
 
 .recall__control-icon {
   width: 16px;
+  transition: 0.4s;
+}
+
+.recall__control-btn:hover .recall__control-icon {
+  transform: scale(1.4);
+}
+
+/* --------------- Post - btn ---------------- */
+
+.post__btn {
+  border-radius: 4px;
+  width: 100%;
+  max-width: 155px;
+  height: auto;
+  padding: 15px 24px;
+  box-shadow: 0 6px 12px 0 rgba(249, 192, 106, 0.22);
+
+  font-size: 22px;
+  color: var(--coffee);
 }
 
 /* ---------------- @media ---------------------- */
@@ -208,6 +228,9 @@
   .recall__control-btn {
     width: 55px;
     height: 55px;
+  }
+  .post__btn {
+    padding: 10px 20px;
   }
 }
 

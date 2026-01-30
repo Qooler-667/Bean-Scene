@@ -1,0 +1,143 @@
+.footer {
+  position: relative;
+  width: 100%;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/footer-img.webp);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.footer__content-wrapper {
+  display: flex;
+  gap: 66px;
+  padding-block: 162px 72px;
+}
+
+.footer__content-social {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  max-width: 380px;
+  color: var(--base-white);
+}
+
+.footer__social-logo {
+  font-family: var(--second-family);
+  font-size: 54px;
+}
+
+.footer__social-desc {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 157%;
+  margin-bottom: 12px;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.footer__link-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--base-white);
+  transition: 0.3s;
+}
+
+.footer__social-link:hover .footer__link-icon {
+  fill: var(--bg-btn);
+}
+
+.footer__list-title {
+  display: inline-block;
+  font-family: var(--font-bold);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--base-white);
+  margin-bottom: 63px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__item-link {
+  font-family: var(--font-family);
+  font-size: 18px;
+  color: var(--base-white);
+  line-height: 150%;
+  transition: 0.3s;
+}
+
+.footer__item-link:hover {
+  color: var(--bg-btn);
+}
+
+.contact-title {
+  margin-bottom: 32px;
+}
+
+.footer__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 332px;
+  font-style: normal;
+}
+
+.footer__contact-item {
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--base-white);
+  transition: color 0.3s ease;
+}
+
+a.footer__contact-item:hover {
+  color: var(--bg-btn);
+}
+
+@media (max-width: 1024px) {
+  .footer__content-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__content-wrapper {
+    text-align: center;
+    padding-block: 80px 72px;
+    gap: 40px;
+  }
+
+  .footer__content-social {
+    align-items: center;
+  }
+
+  .footer__list-title {
+    margin-bottom: 30px;
+  }
+}

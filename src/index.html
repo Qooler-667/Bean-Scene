@@ -3,14 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <noscript
+      ><div
+        style="
+          padding: 20px;
+          text-align: center;
+          background: #603809;
+          color: #fff;
+        "
+      >
+        For full functionality of this site it is necessary to enable
+        JavaScript.
+      </div></noscript
+    >
+    <title>Bean Scene | Coffee Shop</title>
+    <meta
+      name="description"
+      content="Discover Bean Scene - your destination for the finest coffee blends and a cozy atmosphere."
+    />
+    <meta name="theme-color" content="#603809" />
+    <meta property="og:image" content="images/og-image.webp" />
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
+
+    <link rel="icon" href="images/favicon.webp" type="image/webp" />
+
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+    <link
+      rel="preload"
+      href="./fonts/ClickerScript-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/PlayfairDisplay-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles/main.min.css" />
   </head>
   <body>
     @@include("_html-parts/01_header.html")
     <!-- --------------------------------- -->
     <main>
-      <section class="home">
+      <section class="home" id="home">
         <div class="container home__container">
           <div class="home__content-wrapper">
             <span class="home__subtitle"
@@ -22,12 +61,12 @@
               best flavours coffee you will ever have. We provide the best for
               our customers.
             </p>
-            <a class="home__btn btn">Order Now</a>
+            <a href="#menu" class="home__btn btn">Order Now</a>
           </div>
         </div>
       </section>
       <!-- --------------------------------- -->
-      <section class="best">
+      <section class="best" id="about">
         <div class="container best__container">
           <div class="best__content-wrapper">
             <div class="best__content">
@@ -39,10 +78,14 @@
                 coffee is greater. There is no doubt that you will enjoy this
                 coffee more than others you have ever tasted.
               </p>
-              <a href="#" class="best__content-btn btn">Learn More</a>
+              <a href="#pluses" class="best__content-btn btn">Learn More</a>
             </div>
             <div class="best__content-img">
-              <img src="images/cup-coffee.webp" alt="" />
+              <img
+                src="images/cup-coffee.webp"
+                alt="Coffee cup"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -53,7 +96,7 @@
         />
       </section>
       <!-- --------------------------------- -->
-      <section class="blend">
+      <section class="blend" id="menu">
         <div class="container blend__container">
           <div class="blend__content-wrapper">
             <div class="blend__title-wrapper section__title">
@@ -68,7 +111,7 @@
         </div>
       </section>
       <!-- --------------------------------- -->
-      <section class="pluses">
+      <section class="pluses" id="pluses">
         <div class="container pluses__container">
           <div class="pluses__content-wrapper">
             <div class="pluses__title-wrapper section__title">
@@ -97,7 +140,7 @@
                 <img
                   class="pluses__card-img"
                   src="images/pluses-award.webp"
-                  alt="coffee beans"
+                  alt="award"
                 />
                 <div class="pluses__desc">
                   <span class="pluses__card-title">High Quality</span>
@@ -112,7 +155,7 @@
                 <img
                   class="pluses__card-img"
                   src="images/pluses-cup.webp"
-                  alt="coffee beans"
+                  alt="coffee cup"
                 />
                 <div class="pluses__desc">
                   <span class="pluses__card-title">Extraordinary </span>
@@ -126,7 +169,7 @@
                 <img
                   class="pluses__card-img"
                   src="images/pluses-price.webp"
-                  alt="coffee beans"
+                  alt="best price"
                 />
                 <div class="pluses__desc">
                   <span class="pluses__card-title">Affordable Price</span>
@@ -144,7 +187,7 @@
                   that<br /><span>Get started today.</span>
                 </p>
               </div>
-              <a href="#" class="pluses__footer-btn btn">Join Us</a>
+              <a href="#contact" class="pluses__footer-btn btn">Join Us</a>
             </div>
           </div>
         </div>
@@ -166,10 +209,10 @@
                 We are giving you are one time opportunity to experience a
                 better life with coffee.
               </p>
-              <a href="#" class="chance__btn btn">Order Now</a>
+              <a href="#menu" class="chance__btn btn">Order Now</a>
             </div>
             <div class="chance__content-img">
-              <img src="images/chance-cup.png" alt="" />
+              <img src="images/chance-cup.png" alt="Coffee cup promo" />
             </div>
           </div>
         </div>
@@ -197,12 +240,44 @@
         </div>
       </section>
       <!-- --------------------------------- -->
+      <section class="post">
+        <div class="container post__container">
+          <div class="post__content-wrapper">
+            <div class="post__title-wrapper section__title">
+              <h2 class="post__title">Subscribe to get the Latest News</h2>
+              <p class="post__subtitle section__subtitle">
+                Don’t miss out on our latest news, updates, tips and special
+                offers
+              </p>
+            </div>
+            <div class="post__form-wrapper">
+              <form action="#" method="post" class="post__form">
+                <div class="post__form-group">
+                  <input
+                    class="post__input"
+                    type="email"
+                    placeholder="Enter your mail"
+                    required
+                    aria-label="Email address"
+                  />
+                  <button class="post__btn btn" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="post__cup-left post__cup">
+          <img src="images/cup-left.webp" alt="" />
+        </div>
+        <div class="post__cup-right post__cup">
+          <img src="images/cup-right.png" alt="" />
+        </div>
+      </section>
+      <!-- --------------------------------- -->
     </main>
     @@include("_html-parts/02_footer.html")
     <!-- --------------------------------- -->
     @@include("_html-parts/03_burger.html")
-    <!-- --------------------------------- -->
-
     <!-- --------------------------------- -->
     <script src="/js/main.min.js"></script>
   </body>
