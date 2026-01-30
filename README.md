@@ -44,5 +44,5 @@ gulp cleanDist — очистить папку с готовой сборкой.
 Проект выполнен как первая полноценная работа в рамках освоения современного фронтенд-стека.
 
  <p align="center">
-  <img src="./docs/images/preview.png" alt="Bean Scene Preview" width="600">
+  <img src="./docs/images/preview.webp" alt="Bean Scene Preview" width="600">
 </p>
